@@ -4,10 +4,13 @@ import BaseForm from './BaseForm'
 import { Box, Button } from '@mui/material'
 import { Controller, useForm } from 'react-hook-form'
 import type { AuthProps } from '../../../interfaces/AuthProps'
+import { useAuth } from '../../../context/AuthContext'
 
 
 
 const UserForm:React.FC = () => {
+  const {submitForm} = useAuth()
+
   const {control, handleSubmit}= useForm<AuthProps>({
     mode: 'onChange',
     defaultValues:{
@@ -26,6 +29,7 @@ const UserForm:React.FC = () => {
   
   const onSubmit = (formData: AuthProps) => {
   console.log(formData)
+  submitForm(formData)
   }
   
   return (

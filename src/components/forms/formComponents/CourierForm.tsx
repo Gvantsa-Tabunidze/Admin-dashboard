@@ -4,11 +4,13 @@ import BaseForm from './BaseForm'
 import { Box, Button } from '@mui/material'
 import DayPicker from './DayPicker'
 import HourPicker, { type TimeRange } from './HourPicker'
+import { useAuth } from '../../../context/AuthContext'
 
 
 
 
 const CourierForm = () => {
+  const {submitForm} = useAuth()
 
 const {control, handleSubmit}= useForm<AuthProps>({
 mode: 'onChange',
@@ -32,6 +34,7 @@ defaultValues:{
 
  const onSubmit = (formData: AuthProps) => {
   console.log(formData)
+  submitForm(formData)
   }
 
 

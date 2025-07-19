@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProtectedToutes:React.FC = () => {
+const ProtectedRoutes:React.FC = () => {
   return (
     <div>
       <h1>Protected routes</h1>
@@ -8,4 +8,4 @@ const ProtectedToutes:React.FC = () => {
   )
 }
 
-export default ProtectedToutes
+export default ProtectedRoutes

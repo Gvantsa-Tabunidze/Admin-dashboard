@@ -26,7 +26,7 @@ const SelectRole: React.FC<SelectRoleProps> = ({
 }) => {
   return (
     <FormControl
-      variant="standard"
+      variant="outlined"
       sx={{ minWidth: 120}}
       error={error}
       disabled={disabled}

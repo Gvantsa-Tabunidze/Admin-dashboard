@@ -31,7 +31,7 @@ console.log(formData)
 
   return (
     <Box component = 'form' onSubmit={handleSubmit(onSubmit)} sx={{display:'flex', flexDirection:'column', 
-    width:'600px', gap:'100px'}}>
+    width:'600px', gap:'56px'}}>
       <BaseForm control={control} />
       <Button type='submit' variant = 'contained' sx={{ mt: 2, marginTop:6 , height:'48px'}}>Submit</Button>
     </Box>

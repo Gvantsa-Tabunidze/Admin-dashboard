@@ -28,7 +28,7 @@ const UserForm:React.FC = () => {
   
   
   const onSubmit = (formData: AuthProps) => {
-  console.log(formData)
+  
   submitForm(formData)
   }
   

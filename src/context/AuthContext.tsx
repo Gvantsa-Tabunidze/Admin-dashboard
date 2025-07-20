@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, type ReactNode } from "react";
 import type { AuthProps } from "../interfaces/AuthProps";
 import { useNavigate } from "react-router-dom";
-import $axios from "../http/AxiosPost";
+import $axios from "../http/AxiosAuth.Post";
 
 
 interface IAuthContext{
@@ -34,6 +34,7 @@ const submitForm = async (formData:AuthProps)=> {
 
    //save user to local storage
    setUser(formData)
+   console.log(formData)
    localStorage.setItem('user', JSON.stringify(formData))
 
    //Navigate based on role

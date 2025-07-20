@@ -32,8 +32,6 @@ const onSubmit = (formData: AuthProps) => {
 submitForm(formData)
 }
 
-
-
   return (
     <Box component = 'form' onSubmit={handleSubmit(onSubmit)} sx={{display:'flex', flexDirection:'column', 
     width:'600px', gap:'56px'}}>

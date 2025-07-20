@@ -3,7 +3,7 @@ import type { AuthProps, WeekDay, WorkingHours } from '../../../interfaces/AuthP
 import BaseForm from './BaseForm'
 import { Box, Button } from '@mui/material'
 import DayPicker from './DayPicker'
-import HourPicker, { type TimeRange } from './HourPicker'
+import HourPicker from './HourPicker'
 import { useAuth } from '../../../context/AuthContext'
 import TextFieldItem from '../formelements/TextFieldItem'
 

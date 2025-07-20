@@ -31,8 +31,8 @@ const ImageInput:React.FC<ImageInputProps> = ({onChange, name}) => {
 
 const handleFile = (e:React.ChangeEvent<HTMLInputElement>)=> {
   const file = e.target.files[0]
-   if (!file) return;
 
+   if (!file) return;
   const inputData = new FormData();
   inputData.append('file', file)
   inputData.append('upload_preset', preset_key)
@@ -43,7 +43,6 @@ const handleFile = (e:React.ChangeEvent<HTMLInputElement>)=> {
     onChange(res.data.secure_url)
   })
   .catch(err=> console.log(err))
-
 }
 
 

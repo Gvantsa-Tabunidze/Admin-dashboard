@@ -28,7 +28,7 @@ const {control, handleSubmit}= useForm<AuthProps>({
 
 
 const onSubmit = (formData: AuthProps) => {
-console.log(formData)
+
 submitForm(formData)
 }
 

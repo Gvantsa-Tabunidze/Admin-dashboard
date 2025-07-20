@@ -9,6 +9,7 @@ import { VisibilityOffOutlined, VisibilityOutlined } from '@mui/icons-material'
 
 
 
+
 interface BaseFormProps {
   control:Control<AuthProps>;
 }
@@ -67,6 +68,7 @@ const BaseForm:React.FC<BaseFormProps> = ({control}) => {
       <Controller name='profile_image' control={control}
       render={({field}) => (<ImageInput  onChange={field.onChange} name={field.name} />)}/>
       </Box>
+      
     </Box>
   )
 }

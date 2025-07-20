@@ -5,6 +5,7 @@ import { Box, Button } from '@mui/material'
 import DayPicker from './DayPicker'
 import HourPicker, { type TimeRange } from './HourPicker'
 import { useAuth } from '../../../context/AuthContext'
+import TextFieldItem from '../formelements/TextFieldItem'
 
 
 
@@ -33,7 +34,7 @@ defaultValues:{
 
 
  const onSubmit = (formData: AuthProps) => {
-  console.log(formData)
+ 
   submitForm(formData)
   }
 
@@ -42,6 +43,10 @@ defaultValues:{
      <Box component = 'form' onSubmit={handleSubmit(onSubmit)} sx={{display:'flex', flexDirection:'column', 
     width:'600px', gap:'56px'}}>
       <BaseForm control={control} />
+      
+      <Controller name='vehicle' control={control}  
+      render={({field, fieldState})=>(<TextFieldItem {...field} label='Vehicle' variant='outlined' fullWidth
+      error={!!fieldState.error} helperText={fieldState.error?.message} />)} />
 
       <Box sx={{ minHeight: 80, display:'flex', flexDirection:'row', gap:2 }}>
 

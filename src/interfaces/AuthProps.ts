@@ -9,8 +9,7 @@ export interface AuthProps {
     role:string,
     address?:string,
     vehicle?:string,
-    working_days?:WeekDay,
-    working_hours?:WorkingHours
+    working_time_slots: { working_days: WeekDay, working_hours:  WorkingHours}[],
 }
 
 
